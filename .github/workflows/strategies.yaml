@@ -9,6 +9,9 @@ jobs:
       matrix:
         run_num: [1, 2, 3]
         another_var: [one, two]
+        include:
+          - run_num: 3
+            another_var: extra_include
         exclude:
           - run_num: 1
             another_var: one
