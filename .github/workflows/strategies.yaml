@@ -1,0 +1,14 @@
+name: ENV Variables
+
+on: push
+
+jobs:
+  strategies:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        run_num: [1, 2, 4]
+    steps:
+      - name: Strategy Run no.${{ matrix.run_num }}
+        run: |
+          echo "Run number is ${{ matrix.run_num }}"
