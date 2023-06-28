@@ -9,7 +9,7 @@ echo "::add-mask ::$1"
 echo "Hello $1"
 
 time=$(date)
-echo "{time}={$time}" >> $GITHUB_OUTPUT
+echo "time=$time" >> $GITHUB_OUTPUT
 
 echo "::group::Some expandable logs"
 echo "Lorem Ipsum,\nwhat was next?"
