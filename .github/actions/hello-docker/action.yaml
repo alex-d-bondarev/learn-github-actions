@@ -1,0 +1,17 @@
+name: Hello from Docker
+author: alex-d-bondarev
+description: I learn GitHub actions with docker
+inputs:
+  who-to-greet:
+    description: "Say my name!"
+    required: true
+    default: No One
+outputs:
+  time:
+    description: "What time do you call this?"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.who-to-greet }}

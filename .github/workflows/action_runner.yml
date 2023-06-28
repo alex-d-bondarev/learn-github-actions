@@ -1,0 +1,17 @@
+name: Actions Workflow
+
+on:
+  push:
+
+jobs:
+  run-hello-docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Action step
+        uses: ./.github/actions/hello-docker
+        id: hello
+        with:
+          who-to-greet: "The Supreme Ruler Of The World"
+      - run: |
+          echo "Time from the output: ${{ steps.hello.outputs.time }}"
+          echo $HELLO
