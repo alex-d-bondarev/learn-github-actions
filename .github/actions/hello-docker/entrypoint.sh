@@ -17,6 +17,3 @@ echo "Lorem ipsum dolor sit amet,"
 echo "Yes!"
 echo "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
 echo "::endgroup::"
-
-echo "::set-env name=HELLO::hello env var"
-printenv | grep HELLO
