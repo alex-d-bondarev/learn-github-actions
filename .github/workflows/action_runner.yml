@@ -16,4 +16,3 @@ jobs:
           who-to-greet: "The Supreme Ruler Of The World"
       - run: |
           echo "Time from the output: ${{ steps.hello.outputs.time }}"
-          echo $HELLO
